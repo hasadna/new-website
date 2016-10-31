@@ -36,3 +36,9 @@ exclude:
 
 # Server Config options
 livereload: true     # You no longer need to include --livereload
+
+# Custom collections
+collections:
+  projects:
+    output: true
+    permalink: /:path/
