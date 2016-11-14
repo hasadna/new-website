@@ -1,8 +1,18 @@
+@mixin plain-link {
+	text-decoration: none;
+}
+
 @mixin nav-list() {
 	list-style: none;
 	display: inline-block;
 
 	li {
 		display: inline;
+
+		a {
+			@include plain-link;
+		}
 	}
 }
+
+

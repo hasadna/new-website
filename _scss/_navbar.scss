@@ -11,6 +11,10 @@
 		@include nav-list;
 	}
 
+	a {
+		@include plain-link;
+	}
+
 	.main-links {
 		float: right;
 	}
