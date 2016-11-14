@@ -4,27 +4,56 @@ layout: base
 <header>
 	<h1>
 		{{ page.title }}
-		<small>{{ page.tagline }}</small>
+		<small>
+			{{ page.tagline }}
+		</small>
 	</h1>
-
-	{% for screenshot in page.screenshots %}
-		<img src="/img/projects{{ page.url }}{{ screenshot }}">
-	{% endfor %}
-
 </header>
 
-{{ page.content }}
+<main>
 
-<a class="btn btn-default" href="http://{{ page.link }}">לאתר הפרויקט</a>
-<a class="btn btn-default" href="http://github.com/{{ page.github-repo }}">לגיטהאב</a>
-<a class="btn btn-default" href="http://facebook.com/{{ page.facebook-handle }}">לפייסבוק</a>
+	<section id="screenshot">
+		{% for screenshot in page.screenshots %}
+		<img src="/img/projects{{ page.url }}{{ screenshot }}">
+		{% endfor %}
+	</section>
 
-{% for item in page.press %}
-	<div class="press-item">
-		<h3>
-			{{ item.title }}
-			<small>{{ item.source }}</small>
-		</h3>
-		<a href="{{ item.link }}">לכתבה המלאה</a>
-</div>
-{% endfor %}
+	<section id="about">
+		<h2>על הפרויקט</h2>
+		{{ page.content }}
+	</section>
+
+	<section id="project-links">
+		<a href="http://{{ page.link }}">לאתר הפרויקט</a>
+		<a href="http://facebook.com/{{ page.facebook-handle }}">לפייסבוק</a>
+	</section>
+
+	<section id="project-github">
+		<h2>הצטרפו אלינו</h2>
+		<!-- insert git issues component -->
+		<a href="http://github.com/{{ page.github-repo }}">לגיטהאב</a>
+	</section>
+
+	{% if page.press %}
+	<section id="press">
+		{% for item in page.press %}
+		<div class="press-item">
+			<h3>
+				{{ item.title }}
+				<small>{{ item.source }}</small>
+			</h3>
+			<a href="{{ item.link }}">לכתבה המלאה</a>
+		</div>
+		{% endfor %}
+	</section>
+	{% endif %}
+
+	<section id="team-photo">
+		{% for photo in page.team-photos %}
+		<img src="/img/projects{{ page.url }}{{ photo }}">
+		{% endfor %}
+	</section>
+
+</main>
+
+{% include newsletter-form.html %}
