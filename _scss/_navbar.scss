@@ -1,8 +1,11 @@
 #navbar {
 
-	display: block;
-	content: "";
-	height: 60px;
+	height: $navbar-height;
+
+	&:after {
+		display: block;
+		content: "";
+	}
 
 	ul {
 		@include nav-list;
