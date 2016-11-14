@@ -3,6 +3,7 @@
 ---
 
 // Imports
-@import "normalize.css";
-@import "base";
-@import "navbar";
+@import "_normalize";
+@import "_mixins";
+@import "_base";
+@import "_navbar";

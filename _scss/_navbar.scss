@@ -1,0 +1,19 @@
+#navbar {
+
+	display: block;
+	content: "";
+	height: 60px;
+
+	ul {
+		@include nav-list;
+	}
+
+	.main-links {
+		float: right;
+	}
+
+	.secondary-links {
+		float: left;
+	}
+
+}
