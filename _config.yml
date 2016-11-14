@@ -39,6 +39,9 @@ defaults:
       type: projects
     values:
       layout: project
+sass:
+  sass_dir: _scss
+  style: :compressed
 
 # Server Config options
 livereload: true     # You no longer need to include --livereload
