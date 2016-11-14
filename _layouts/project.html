@@ -8,22 +8,23 @@ layout: base
 	</h1>
 
 	{% for screenshot in page.screenshots %}
-		<img class="img-responsive" src="/img/projects/anyway/{{ screenshot }}">
+		<img src="/img/projects{{ page.url }}{{ screenshot }}">
 	{% endfor %}
 
 </header>
 
 {{ page.content }}
 
-{% for item in page.press %}
-	<div class="thumbnail">
-		<div class="caption">
-			<h3>
-				{{ item.title }}
-				<small>{{ item.source }}</small>
-				<a href="{{ item.link }}">לכתבה המלאה</a>
-			</h3>
+<a class="btn btn-default" href="http://{{ page.link }}">לאתר הפרויקט</a>
+<a class="btn btn-default" href="http://github.com/{{ page.github-repo }}">לגיטהאב</a>
+<a class="btn btn-default" href="http://facebook.com/{{ page.facebook-handle }}">לפייסבוק</a>
 
-		</div>
+{% for item in page.press %}
+	<div class="press-item">
+		<h3>
+			{{ item.title }}
+			<small>{{ item.source }}</small>
+		</h3>
+		<a href="{{ item.link }}">לכתבה המלאה</a>
 </div>
 {% endfor %}
