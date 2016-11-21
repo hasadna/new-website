@@ -1,59 +1,53 @@
 ---
 layout: base
 ---
-<header>
+
+<section id="project-header">
 	<h1>
 		{{ page.title }}
-		<small>
-			{{ page.tagline }}
-		</small>
 	</h1>
-</header>
-
-<main>
-
-	<section id="screenshot">
-		{% for screenshot in page.screenshots %}
+	<small>
+		{{ page.tagline }}
+	</small>
+	{% for screenshot in page.screenshots %}
 		<img src="/img/projects{{ page.url }}{{ screenshot }}">
-		{% endfor %}
-	</section>
+	{% endfor %}
+</section>
 
-	<section id="about">
-		<h2>על הפרויקט</h2>
-		{{ page.content }}
-	</section>
+<section id="about" class="secondary">
+	<h2>על הפרויקט</h2>
+	{{ page.content }}
+</section>
 
-	<section id="project-links">
-		<a href="http://{{ page.link }}">לאתר הפרויקט</a>
-		<a href="http://facebook.com/{{ page.facebook-handle }}">לפייסבוק</a>
-	</section>
+<section id="project-links" class="secondary">
+	<a href="http://{{ page.link }}">לאתר הפרויקט</a>
+	<a href="http://facebook.com/{{ page.facebook-handle }}">לפייסבוק</a>
+</section>
 
-	<section id="project-github">
-		<h2>הצטרפו אלינו</h2>
-		<!-- insert git issues component -->
-		<a href="http://github.com/{{ page.github-repo }}">לגיטהאב</a>
-	</section>
+<section id="project-github">
+	<h2>הצטרפו אלינו</h2>
+	<!-- insert git issues component -->
+	<a href="http://github.com/{{ page.github-repo }}">לגיטהאב</a>
+</section>
 
-	{% if page.press %}
-	<section id="press">
-		{% for item in page.press %}
-		<div class="press-item">
-			<h3>
-				{{ item.title }}
-				<small>{{ item.source }}</small>
-			</h3>
-			<a href="{{ item.link }}">לכתבה המלאה</a>
-		</div>
-		{% endfor %}
-	</section>
-	{% endif %}
+{% if page.press %}
+<section id="press">
+	{% for item in page.press %}
+	<div class="press-item">
+		<h3>
+			{{ item.title }}
+			<small>{{ item.source }}</small>
+		</h3>
+		<a href="{{ item.link }}">לכתבה המלאה</a>
+	</div>
+	{% endfor %}
+</section>
+{% endif %}
 
-	<section id="team-photo">
-		{% for photo in page.team-photos %}
-		<img src="/img/projects{{ page.url }}{{ photo }}">
-		{% endfor %}
-	</section>
-
-</main>
+<section id="team-photo">
+	{% for photo in page.team-photos %}
+	<img src="/img/projects{{ page.url }}{{ photo }}">
+	{% endfor %}
+</section>
 
 {% include newsletter-form.html %}
