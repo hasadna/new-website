@@ -1,0 +1,25 @@
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.half-width {
+	width: 50%;
+}
+
+section {
+	@extend .full-width;
+
+	&.secondary {
+		@extend .half-width;
+	}
+}
