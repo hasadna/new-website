@@ -1,26 +1,26 @@
-header > nav {
+header {
 
-	height: $navbar-height;
+	@extend .full-width;
 
-	&:after {
+	& > nav {
+
+		height: $navbar-height;
 		display: block;
-		content: "";
-	}
 
-	ul {
-		@include nav-list;
-	}
+		ul {
+			@include nav-list;
+		}
 
-	a {
-		@include plain-link;
-	}
+		a {
+			@include plain-link;
+		}
 
-	.main-links {
-		float: right;
-	}
+		.main-links {
+			float: right;
+		}
 
-	.secondary-links {
-		float: left;
+		.secondary-links {
+			float: left;
+		}
 	}
-
 }
