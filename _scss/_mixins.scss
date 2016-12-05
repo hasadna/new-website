@@ -1,5 +1,8 @@
 @mixin plain-link {
 	text-decoration: none;
+	&:visited {
+		color: inherit;
+	}
 }
 
 @mixin nav-list() {
@@ -11,6 +14,7 @@
 
 		a {
 			@include plain-link;
+
 		}
 	}
 }

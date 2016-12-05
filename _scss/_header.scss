@@ -13,6 +13,10 @@ header {
 
 		a {
 			@include plain-link;
+			color: $navbar-item-color;
+			font-size: $navbar-item-font-size;
+			padding-right: $navbar-item-padding;
+			padding-left: $navbar-item-padding;
 		}
 
 		.main-links {

@@ -1,5 +1,12 @@
-$brand-color:                 #3267B4;
-$brand-dark-color:						#122D4E;
-$brand-grey:									#E7EBF0;
+$brand-color:                    #3267B4;
+$brand-dark-color:						   #122D4E;
+$brand-grey:									   #E7EBF0;
 
-$navbar-height:                  90px;
+$navbar-height:                     90px;
+
+
+// NAVBAR
+
+$navbar-item-font-size:					    18px;
+$navbar-item-color:    $brand-dark-color;
+$navbar-item-padding:						    12px;
