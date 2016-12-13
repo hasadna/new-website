@@ -19,4 +19,9 @@
 	}
 }
 
+@mixin icn(@unicode) {
+	@extend .fa;
+	content: "\@{unicode}";
+}
+
 
