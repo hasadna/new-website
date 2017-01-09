@@ -19,9 +19,9 @@
 	}
 }
 
-@mixin icn(@unicode) {
-	@extend .fa;
-	content: "\@{unicode}";
+@mixin icon($unicode) {
+	&:before {
+		@extend .fa;
+		content: $unicode;
+	}
 }
-
-
