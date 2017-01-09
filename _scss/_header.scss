@@ -26,5 +26,25 @@ header {
 		.secondary-links {
 			float: left;
 		}
+
+		.social-links {
+
+			a[href*="twitter"] {
+				@include icon("\f099")
+			}
+
+			a[href*="facebook"] {
+				@include icon("\f09a")
+			}
+
+			a[href*="github"] {
+				@include icon("\f09b")
+			}
+
+			a[href*="youtube"] {
+				@include icon("\f16a")
+			}
+
+		}
 	}
 }
