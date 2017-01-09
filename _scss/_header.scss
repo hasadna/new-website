@@ -2,49 +2,48 @@ header {
 
 	@extend .full-width;
 
-	& > nav {
-
+	nav {
 		height: $navbar-height;
 		display: block;
+	}
 
-		ul {
-			@include nav-list;
+	ul {
+		@include nav-list;
+	}
+
+	a {
+		@include plain-link;
+		color: $navbar-item-color;
+		font-size: $navbar-item-font-size;
+		padding-right: $navbar-item-padding;
+		padding-left: $navbar-item-padding;
+	}
+
+	.main-links {
+		float: right;
+	}
+
+	.secondary-links {
+		float: left;
+	}
+
+	.social-links {
+
+		a[href*="twitter"] {
+			@include icon("\f099")
 		}
 
-		a {
-			@include plain-link;
-			color: $navbar-item-color;
-			font-size: $navbar-item-font-size;
-			padding-right: $navbar-item-padding;
-			padding-left: $navbar-item-padding;
+		a[href*="facebook"] {
+			@include icon("\f09a")
 		}
 
-		.main-links {
-			float: right;
+		a[href*="github"] {
+			@include icon("\f09b")
 		}
 
-		.secondary-links {
-			float: left;
+		a[href*="youtube"] {
+			@include icon("\f16a")
 		}
 
-		.social-links {
-
-			a[href*="twitter"] {
-				@include icon("\f099")
-			}
-
-			a[href*="facebook"] {
-				@include icon("\f09a")
-			}
-
-			a[href*="github"] {
-				@include icon("\f09b")
-			}
-
-			a[href*="youtube"] {
-				@include icon("\f16a")
-			}
-
-		}
 	}
 }
