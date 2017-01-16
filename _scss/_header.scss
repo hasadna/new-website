@@ -2,21 +2,19 @@ header {
 
 	@extend .full-width;
 
-	nav {
-		height: $navbar-height;
-		display: block;
-	}
-
 	ul {
 		@include nav-list;
 	}
 
 	a {
 		@include plain-link;
+		line-height: $navbar-height;
+		height: $navbar-height;
 		color: $navbar-item-color;
 		font-size: $navbar-item-font-size;
 		padding-right: $navbar-item-padding;
 		padding-left: $navbar-item-padding;
+		text-align: middle;
 	}
 
 	.main-links {
@@ -28,6 +26,10 @@ header {
 	}
 
 	.social-links {
+
+		a {
+			@include circled($navbar-item-color);
+		}
 
 		a[href*="twitter"] {
 			@include icon("\f099")

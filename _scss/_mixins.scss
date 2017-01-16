@@ -7,18 +7,23 @@
 	display: inline-block;
 
 	li {
-		display: inline;
-
-		a {
-			@include plain-link;
-
-		}
+		display: inline-block;
 	}
 }
 
 @mixin icon($unicode) {
 	&:before {
 		@extend .fa;
+		@extend .fa-fw;
 		content: $unicode;
+	}
+}
+
+@mixin circled($border-color) {
+	&:before {
+		@extend .fa-border;
+		text-align: middle;
+		border: 1px $border-color solid;
+		border-radius: 50%;
 	}
 }
