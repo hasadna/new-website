@@ -2,49 +2,50 @@ header {
 
 	@extend .full-width;
 
-	& > nav {
+	ul {
+		@include nav-list;
+	}
 
+	a {
+		@include plain-link;
+		line-height: $navbar-height;
 		height: $navbar-height;
-		display: block;
+		color: $navbar-item-color;
+		font-size: $navbar-item-font-size;
+		padding-right: $navbar-item-padding;
+		padding-left: $navbar-item-padding;
+		text-align: middle;
+	}
 
-		ul {
-			@include nav-list;
-		}
+	.main-links {
+		float: right;
+	}
+
+	.secondary-links {
+		float: left;
+	}
+
+	.social-links {
 
 		a {
-			@include plain-link;
-			color: $navbar-item-color;
-			font-size: $navbar-item-font-size;
-			padding-right: $navbar-item-padding;
-			padding-left: $navbar-item-padding;
+			@include circled($navbar-item-color);
 		}
 
-		.main-links {
-			float: right;
+		a[href*="twitter"] {
+			@include icon("\f099")
 		}
 
-		.secondary-links {
-			float: left;
+		a[href*="facebook"] {
+			@include icon("\f09a")
 		}
 
-		.social-links {
-
-			a[href*="twitter"] {
-				@include icon("\f099")
-			}
-
-			a[href*="facebook"] {
-				@include icon("\f09a")
-			}
-
-			a[href*="github"] {
-				@include icon("\f09b")
-			}
-
-			a[href*="youtube"] {
-				@include icon("\f16a")
-			}
-
+		a[href*="github"] {
+			@include icon("\f09b")
 		}
+
+		a[href*="youtube"] {
+			@include icon("\f16a")
+		}
+
 	}
 }
