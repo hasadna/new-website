@@ -1,6 +1,8 @@
 header {
 
 	@extend .full-width;
+	height: $navbar-height;
+	line-height: $navbar-height;
 
 	ul {
 		@include nav-list;
@@ -8,12 +10,11 @@ header {
 
 	a {
 		@include plain-link;
-		line-height: $navbar-height;
-		height: $navbar-height;
+		line-height: $navbar-item-line-height;
 		color: $navbar-item-color;
 		font-size: $navbar-item-font-size;
-		padding-right: $navbar-item-padding;
-		padding-left: $navbar-item-padding;
+		margin-right: $navbar-item-margin;
+		margin-left: $navbar-item-margin;
 		text-align: middle;
 	}
 
@@ -28,24 +29,36 @@ header {
 	.social-links {
 
 		a {
-			@include circled($navbar-item-color);
+			width: $navbar-item-line-height;
+			height: $navbar-item-line-height;
+			line-height: $navbar-item-line-height;
+			font-size: $navbar-icon-font-size;
+			text-align: center;
+			border: 1px $navbar-item-color solid;
+			border-radius: 50%;
+			display: inline-block;
+			margin-right: $navbar-item-margin/3;
+			margin-left: $navbar-item-margin/3;
+
+			&[href*="twitter"] {
+				@include icon("\f099")
+			}
+
+			&[href*="facebook"] {
+				@include icon("\f09a")
+			}
+
+			&[href*="github"] {
+				@include icon("\f09b")
+			}
+
+			&[href*="youtube"] {
+				@include icon("\f16a")
+			}
+
 		}
 
-		a[href*="twitter"] {
-			@include icon("\f099")
-		}
 
-		a[href*="facebook"] {
-			@include icon("\f09a")
-		}
-
-		a[href*="github"] {
-			@include icon("\f09b")
-		}
-
-		a[href*="youtube"] {
-			@include icon("\f16a")
-		}
 
 	}
 }

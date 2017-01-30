@@ -13,17 +13,7 @@
 
 @mixin icon($unicode) {
 	&:before {
-		@extend .fa;
-		@extend .fa-fw;
+		font-family: FontAwesome;
 		content: $unicode;
-	}
-}
-
-@mixin circled($border-color) {
-	&:before {
-		@extend .fa-border;
-		text-align: middle;
-		border: 1px $border-color solid;
-		border-radius: 50%;
 	}
 }
