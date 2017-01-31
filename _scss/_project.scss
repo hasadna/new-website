@@ -1,13 +1,34 @@
 #project-header {
+	padding-top: 94px;
 	text-align: center;
 	color: white;
 	background-color: $brand-color;
 
+	h1 {
+		margin-bottom: 23px;
+	}
+
 	small {
 		display: block;
+		font-size: $font-size-tagline;
+		margin-bottom: 65px;
+	}
+}
+
+section {
+	padding: 100px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+#about {
+	h2 {
+		color: $brand-purple-grey;
+		margin-bottom: 35px;
 	}
 }
 
 #project-links {
 	background-color: $brand-grey;
 }
+
