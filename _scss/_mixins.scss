@@ -2,7 +2,15 @@
 	text-decoration: none;
 }
 
-@mixin nav-list() {
+@mixin button-link($text-color, $background-color) {
+	@include plain-link;
+	color: $text-color;
+	background-color: $background-color;
+	padding: 14px 42px 15px;
+	border-radius: 4px;
+}
+
+@mixin nav-list {
 	list-style: none;
 	display: inline-block;
 
