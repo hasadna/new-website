@@ -1,9 +1,10 @@
 // COLORS
 
-$brand-color:                    			 #3267B4;
-$brand-dark-color:						   			 #122D4E;
-$brand-grey:									   			 #E7EBF0;
-$brand-purple-grey:										 #717692;
+$brand:																 #00ADEF;
+$blue:                    			 			 #3267B4;
+$blue-dark:						   			 				 #122D4E;
+$grey:									   						 #E7EBF0;
+$purple:										 					 #717692;
 
 // TYPOGRAPHY
 
@@ -12,12 +13,13 @@ $font-size-base:													26px;
 $font-size-h1:														38px;
 $font-size-h2:														42px;
 $font-size-tagline:						 $font-size-base;
+$font-size-small:													22px;
 
 // NAVBAR
 
 $navbar-height:                     			87px;
 $navbar-item-font-size:					    			18px;
-$navbar-item-color:    			 $brand-dark-color;
+$navbar-item-color:    			 				$blue-dark;
 $navbar-item-margin:						    			12px;
 $navbar-item-line-height:									38px;
 $navbar-icon-font-size:										26px;

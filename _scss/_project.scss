@@ -22,13 +22,20 @@ section {
 }
 
 #about {
+
 	h2 {
 		color: $brand-purple-grey;
 		margin-bottom: 35px;
+	}
+
+	a {
+		text-transform: uppercase;
+		font-size: $font-size-small;
 	}
 }
 
 #project-links {
 	background-color: $brand-grey;
 }
+
 
