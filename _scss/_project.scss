@@ -2,7 +2,7 @@
 	padding-top: 94px;
 	text-align: center;
 	color: white;
-	background-color: $brand-color;
+	background-color: $blue;
 
 	h1 {
 		margin-bottom: 23px;
@@ -19,23 +19,47 @@ section {
 	padding: 100px;
 	box-sizing: border-box;
 	text-align: center;
+
+	h2 {
+		margin-bottom: 40px;
+	}
 }
 
 #about {
 
 	h2 {
-		color: $brand-purple-grey;
-		margin-bottom: 35px;
+		color: $purple;
+	}
+
+	p {
+		margin-bottom: 50px;
 	}
 
 	a {
+		color: $brand;
+		font-weight: bold;
 		text-transform: uppercase;
 		font-size: $font-size-small;
+		text-decoration: none;
+		border-bottom: 2px solid $brand;
+		padding: 5px 3px;
 	}
 }
 
 #project-links {
-	background-color: $brand-grey;
+	background-color: $grey;
 }
 
+#project-github {
+
+	background-color: $blue-dark;
+
+	h2 {
+		color: $brand;
+	}
+
+	a {
+		@include button-link(white, $brand);
+	}
+}
 
